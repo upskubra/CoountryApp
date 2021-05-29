@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.countryapp.R
 import com.example.countryapp.model.Country
 import kotlinx.android.synthetic.main.country_recycler_row.view.*
-import java.util.*
 import kotlin.collections.ArrayList
 
 class CountryAdapter(
@@ -34,7 +33,7 @@ class CountryAdapter(
     override fun getItemCount(): Int {
          return countryArrayList.size
     }
-    fun updateCountryList(newCountryArrayList : ArrayList<Country> ){
+    fun updateCountryList(newCountryArrayList: List<Country>){
         countryArrayList.clear()
         countryArrayList.addAll(newCountryArrayList)
         notifyDataSetChanged()
