@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".view.DetailFragment">
+
+
+        <ImageView
+            android:id="@+id/detailImageView"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+        <TextView
+            android:id="@+id/countryNameDetailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_text"
+            android:layout_margin="10dp">
+        </TextView>
+        <TextView
+            android:id="@+id/countryCapitalDetailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/capital_text">
+        </TextView>
+        <TextView
+            android:id="@+id/countryRegionDetailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/region_text">
+        </TextView>
+        <TextView
+            android:id="@+id/countryCurrencyDetailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/currency_text">
+        </TextView>
+        <TextView
+            android:id="@+id/countryLanguageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/language_text">
+        </TextView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

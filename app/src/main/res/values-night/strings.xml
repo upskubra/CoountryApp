@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_message_text">Error!</string>
+    <string name="country_name_text">countryNameTextView</string>
+    <string name="country_region_name_text">countryRegionNameTextView</string>
+    <string name="language_text">Language</string>
+    <string name="currency_text">Currency</string>
+    <string name="region_text">Region</string>
+    <string name="capital_text">Capital</string>
+    <string name="name_text">Name</string>
+</resources>
