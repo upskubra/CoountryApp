@@ -14,7 +14,6 @@ import com.example.countryapp.viewmodel.ListViewModel
 import kotlinx.android.synthetic.main.fragment_list.*
 
 class ListFragment : Fragment() {
-    private var countryUuid = 0
     private lateinit var viewModel: ListViewModel
     private val countryAdapter = CountryAdapter(arrayListOf())
 
@@ -50,9 +49,7 @@ class ListFragment : Fragment() {
 
 
 
-        arguments?.let {
-            countryUuid = DetailFragmentArgs.fromBundle(it).countryUuid
-        }
+
 
     }
 
