@@ -47,10 +47,6 @@ class ListFragment : Fragment() {
 
 
 
-
-
-
-
     }
 
 

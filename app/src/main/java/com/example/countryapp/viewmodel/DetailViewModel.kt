@@ -9,6 +9,8 @@ class DetailViewModel : ViewModel() {
     val countryLiveData = MutableLiveData<Country>()
 
     fun getDataFromRoom() {
+
+        // example data
         val country = Country(
             "Turkey", "Ankara", "Asia",
             "TRY", "Turkish", "www.test.com"
