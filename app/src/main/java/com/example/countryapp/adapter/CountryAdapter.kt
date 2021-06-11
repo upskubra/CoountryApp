@@ -7,6 +7,8 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.countryapp.R
 import com.example.countryapp.model.Country
+import com.example.countryapp.util.downloadFromUrl
+import com.example.countryapp.util.placeholderProgressBar
 import com.example.countryapp.view.ListFragmentDirections
 import kotlinx.android.synthetic.main.country_recycler_row.view.*
 
@@ -30,6 +32,8 @@ class CountryAdapter(
         holder.view.countryNameTextView.text = countryArrayList[position].countryName
         holder.view.countryRegionNameTextView.text = countryArrayList[position].countryRegion
         // image coming soon with glide
+
+        holder.view.imageView.downloadFromUrl(countryArrayList[position].countryImageUrl, placeholderProgressBar(holder.view.context))
 
         // when click the item
         holder.view.setOnClickListener {

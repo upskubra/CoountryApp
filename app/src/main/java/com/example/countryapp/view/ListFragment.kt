@@ -45,6 +45,15 @@ class ListFragment : Fragment() {
 
         observeLiveData()
 
+        swipeRefreshLayout.setOnRefreshListener{
+            recyclerView.visibility = View.GONE
+            progressBar.visibility =View.GONE
+            progressBar.visibility = View.VISIBLE
+            viewModel.refreshData()
+            swipeRefreshLayout.isRefreshing = false
+
+        }
+
 
 
     }
