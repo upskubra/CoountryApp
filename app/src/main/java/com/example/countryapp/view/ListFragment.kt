@@ -49,7 +49,7 @@ class ListFragment : Fragment() {
             recyclerView.visibility = View.GONE
             progressBar.visibility =View.GONE
             progressBar.visibility = View.VISIBLE
-            viewModel.refreshData()
+            viewModel.refreshDataFromAPI()
             swipeRefreshLayout.isRefreshing = false
 
         }
