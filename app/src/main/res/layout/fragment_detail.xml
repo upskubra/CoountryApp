@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="country"
+            type="com.example.countryapp.model.Country" />
+    </data>
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -17,13 +22,13 @@
             android:layout_width="400dp"
             android:layout_height="200dp"
             android:layout_margin="10dp"
-            android:padding="10dp"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            android:DownloadUrl="@{country.countryImageUrl}"
+            android:padding="10dp" />
         <TextView
             android:id="@+id/countryNameDetailTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/name_text"
+            android:text="@{country.countryName}"
             android:layout_margin="10dp">
         </TextView>
         <TextView
@@ -31,28 +36,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/capital_text">
+            android:text="@{country.countryCapital}">
         </TextView>
         <TextView
             android:id="@+id/countryRegionDetailTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/region_text">
+            android:text="@{country.countryRegion}">
         </TextView>
         <TextView
             android:id="@+id/countryCurrencyDetailTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/currency_text">
+            android:text="@{country.countryCurrency}">
         </TextView>
         <TextView
             android:id="@+id/countryLanguageTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/language_text">
+            android:text="@{country.countryLanguage}">
         </TextView>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

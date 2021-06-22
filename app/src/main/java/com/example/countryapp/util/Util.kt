@@ -2,6 +2,7 @@ package com.example.countryapp.util
 
 import android.content.Context
 import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -33,3 +34,8 @@ fun ImageView.downloadFromUrl(Url: String?, circularProgressDrawable: CircularPr
                 start()
             }
     }
+
+@BindingAdapter("android:DownloadUrl")
+fun downloadImage(view : ImageView, url : String?){
+    view.downloadFromUrl(url, placeholderProgressBar(view.context))
+}

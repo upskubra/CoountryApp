@@ -1,43 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <data>
+
+        <variable
+            name="country"
+            type="com.example.countryapp.model.Country" />
+
+        <variable
+            name="listener"
+            type="com.example.countryapp.adapter.CountryClickListener" />
+    </data>
+
     <androidx.appcompat.widget.LinearLayoutCompat
 
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:onClick="@{listener::onCountryClicked}"
         android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/uuidText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(country.uuid)}"
+            android:visibility="gone">
+        </TextView>
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:padding="5dp"
-            android:src="@drawable/ic_launcher_background">
-        </ImageView>
+            android:DownloadUrl="@{country.countryImageUrl}"
+            android:padding="5dp" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:padding="10dp"
+            android:gravity="center_vertical"
             android:orientation="vertical"
-            android:gravity="center_vertical">
+            android:padding="10dp">
+
             <TextView
                 android:id="@+id/countryNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/country_name_text"
-                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:text="@{country.countryName}"
                 android:textColor="@color/black"
-                android:layout_margin="10dp">
-            </TextView>
+                android:textSize="20sp" />
+
             <TextView
                 android:id="@+id/countryRegionNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/country_region_name_text"
-                android:layout_margin="10dp">
-            </TextView>
+                android:layout_margin="10dp"
+                android:text="@{country.countryRegion}" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

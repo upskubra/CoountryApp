@@ -104,4 +104,10 @@ fun refreshDataFromAPI(){
         customPreferences.saveTime(System.nanoTime())
 
     }
+
+    override fun onCleared() {
+        //for memory
+        super.onCleared()
+        disposable.clear()
+    }
 }
